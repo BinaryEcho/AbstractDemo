@@ -1,23 +1,25 @@
-public class AbstractDemo{
-    public static void main(String... args){
+import java.util.Scanner;
 
-        Varun man1 = new Varun();
-        Shrikant man2 = new Shrikant();
-        Kumar man3 = new Kumar();
+public class AbstractDemo {
+    public static void main(String... args) {
+        Scanner scan = new Scanner(System.in);
+        String input;
+        System.out.println("Please enter your name: ");
+        input = scan.nextLine();
 
-        if (man1.setHusband() == "Varun"){
-            man1.setFamily();
-            man1.family();
-            man1.customMessage();
-        } else if (man2.setHusband() == "Shrikant"){
-            man1.setFamily();
-            man2.family();
-            man2.customMessage();
-        } else if (man3.setHusband() == "Kumar"){
-            man1.setFamily();
-            man3.family();
-            man3.customMessage();
+        if (input .equals("Varun") || input .equals("varun")) {
+            Varun man = new Varun(input);
+            man.setFamily();
+            man.customMessage();
+        } else if (input .equals("Shrikant") || input .equals("shrikant")) {
+            Shrikant man = new Shrikant(input);
+            man.setFamily();
+            man.customMessage();
+        } else if (input .equals("Kumar") || input .equals("kumar")) {
+            Kumar man = new Kumar(input);
+            man.setFamily();
+            man.customMessage();
         } else
-            return;
+            System.out.println("Sorry friend. You're not a known member of the group, yet");
     }
 }
