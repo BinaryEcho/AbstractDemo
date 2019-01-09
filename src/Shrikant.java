@@ -1,5 +1,6 @@
 public class Shrikant extends Man {
-    public Shrikant(){
+    public Shrikant(String iHusband){
+        super(iHusband);
     }
     public void setFamily(){
         setWife("Preeti");
